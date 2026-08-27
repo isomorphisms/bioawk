@@ -1,0 +1,32 @@
+name: exact-motif-check-all
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-all:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Install fixed Biostrings gate
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            bison \
+            zlib1g-dev \
+            r-base=4.3.3-2build2 \
+            r-bioc-biostrings=2.70.2+dfsg-1
+          Rscript -e 'stopifnot(getRversion() == "4.3.3", as.character(packageVersion("Biostrings")) == "2.70.2")'
+
+      - name: Require every exact-motif implementation
+        run: make -C benchmarks/exact-motif check-all
