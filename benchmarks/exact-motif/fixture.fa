@@ -1,0 +1,12 @@
+>start_overlap
+ACGTACGTACGT
+>end_only
+TTTACGTACGT
+>near_miss
+ACGTACGAACGTTCGT
+>two_hits
+GACGTACGTCCACGTACGT
+>boundary_left
+ACGT
+>boundary_right
+ACGT
