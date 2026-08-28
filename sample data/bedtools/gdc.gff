@@ -8,5 +8,5 @@ chr2L	.	exon	171	220	0	+	.	ID=mRNA:xs2:exon:171-220;Parent=mRNA:xs2;
 chr2L	.	mRNA	41	220	0	+	.	ID=mRNA:xs2;Parent=g2;
 chr2L	.	CDS	161	230	0	-	.	ID=tRNA:t2:CDS:161-230;Parent=tRNA:t2;
 chr2L	.	exon	161	230	0	-	.	ID=tRNA:t2:exon:161-230;Parent=tRNA:t2;
-chr2L	.	tRNA	161	230	0	-	.	ID=tRNA:t2;Parent=tRNA:t2;
+chr2L	.	tRNA	161	230	0	-	.	ID=tRNA:t2;Parent=t2;
 chr2L	.	gene	41	220	0	+	.	ID=g2;
