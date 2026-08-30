@@ -1,0 +1,10 @@
+project	upstream_ref	upstream_path	upstream_blob_sha	local_path
+biopython	master	Tests/Fasta/f002	57a4bfc50bd11a3f2d73ad0e5fd3fdc643a85df4	biopython/f002.fasta
+biopython	master	Tests/Quality/example.fastq	fc86a1eb547c29cb82e866485765e857bb63c113	biopython/example.fastq
+biopython	master	Tests/Quality/tricky.fastq	8be8c3e846ce3e4330987da693bd3d4e5a30a054	biopython/tricky.fastq
+biopython	master	Tests/Quality/zero_length.fastq	71a3382d8dfeaeb18f27e9cb3551fdc2fe941fe7	biopython/zero_length.fastq
+htslib	develop	test/realn01.fa	9188e9eaa8cb7933d0e2e215e657eb5494c0aa1c	htslib/realn01.fa
+htslib	develop	test/realn01.sam	1f961d174b5dd4bf48ff00a8b231a1d5816fa55a	htslib/realn01.sam
+htslib	develop	test/vcf44_1.vcf	b4a1cbb34d2bb8524a9002cf9a4942aae8ebd805	htslib/vcf44_1.vcf
+bedtools2	master	test/intersect/a.bed	b8b157412f08bb15b9bfd9a814ff5393c8e0a9ad	bedtools/a.bed
+bedtools2	master	test/intersect/gdc.gff	645148275229d656539cd48df70b7a6b1c200154	bedtools/gdc.gff

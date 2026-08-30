@@ -1,0 +1,27 @@
+name: shared biology corpus
+
+on:
+  pull_request:
+    paths:
+      - 'sample data/**'
+      - '.github/workflows/shared-biology-corpus.yml'
+  push:
+    branches:
+      - master
+    paths:
+      - 'sample data/**'
+      - '.github/workflows/shared-biology-corpus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-corpus:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify content-addressed fixtures and exact oracle cases
+        uses: isomorphisms/ai-ci/biology@7932b2ea7f3d20ea4e005d65b272119de4bb7970
+        with:
+          corpus_root: sample data
