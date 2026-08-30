@@ -33,16 +33,6 @@ That is parser/format correctness. Search workloads on these same bytes should b
 - `bedtools/a.bed` — small six-column BED fixture.
 - `bedtools/gdc.gff` — GFF features including UTR, CDS, intron, exon, mRNA, tRNA, and gene records on both strands.
 
-## Large and binary corpus
-
-`fetch-large.sh` downloads the large/reference material into `sample data/large/` rather than pretending multi-gigabyte archives belong in one ordinary Git blob. This includes:
-
-- SeqKit's published 2.2 GB benchmark archive, containing its large FASTA/FASTQ benchmark datasets;
-- the ENA `SRR020192.fastq.gz` real-read example used in the Biopython cookbook;
-- HTSlib's roughly 1 MB `ce.fa` reference fixture.
-
-These are deliberately not required by the tiny correctness suite. Use them for scaling, whole-program, parsing, compression, and throughput comparisons.
-
 ## Standing use
 
 When search or branching changes in a compiler backend, use these bytes as a recurring contrast suite rather than inventing a fresh toy input each time. The broader comparison protocol is recorded in `isomorphisms/ai-ci` PR #27 and cross-linked from `isomorphisms/computer-science` issues #23, #24, and #26.
