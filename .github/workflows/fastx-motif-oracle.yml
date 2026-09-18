@@ -2,15 +2,9 @@ name: FASTA FASTQ motif oracle
 
 on:
   pull_request:
-    paths:
-      - 'tests/fastx-motif-oracle/**'
-      - '.github/workflows/fastx-motif-oracle.yml'
   push:
     branches:
       - master
-    paths:
-      - 'tests/fastx-motif-oracle/**'
-      - '.github/workflows/fastx-motif-oracle.yml'
   workflow_dispatch:
 
 permissions:
