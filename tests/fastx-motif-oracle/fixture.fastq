@@ -1,0 +1,12 @@
+@quality_decoy
+TTTTTTTTTTTT
++
+ACGTACGTIIII
+@adversarial_prefix
+ACGTACGAACGTACGT
++
+IIIIIIIIIIIIIIII
+@fastq_overlap
+ACGTACGTACGT
++
+IIIIIIIIIIII
