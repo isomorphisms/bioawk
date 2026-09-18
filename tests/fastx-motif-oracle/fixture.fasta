@@ -1,0 +1,17 @@
+>no_match
+TTTTTTTTTTTT
+>beginning
+ACGTACGTTTTT
+>middle
+TTACGTACGTTT
+>end
+TTTACGTACGT
+>overlap
+ACGTACGTACGT
+>wrapped
+TTACG
+TACGTAA
+>boundary_left
+ACGT
+>boundary_right
+ACGT
