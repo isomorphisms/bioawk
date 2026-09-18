@@ -1,0 +1,32 @@
+name: FASTA FASTQ motif oracle
+
+on:
+  pull_request:
+    paths:
+      - 'tests/fastx-motif-oracle/**'
+      - '.github/workflows/fastx-motif-oracle.yml'
+  push:
+    branches:
+      - master
+    paths:
+      - 'tests/fastx-motif-oracle/**'
+      - '.github/workflows/fastx-motif-oracle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reference-oracle:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Install reference build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends bison zlib1g-dev
+
+      - name: Build and execute exact reference oracle
+        run: sh tests/fastx-motif-oracle/run.sh
